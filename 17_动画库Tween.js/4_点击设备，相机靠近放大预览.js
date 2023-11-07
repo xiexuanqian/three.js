@@ -18,7 +18,7 @@ const mesh = new THREE.Mesh(geometry, material)
 mesh.name = '长方体'
 const geometry2 = new THREE.BoxGeometry(50, 50, 50)
 const material2 = new THREE.MeshLambertMaterial({
-    color: 'green'
+    color: 'green'  
 })
 mesh.position.set(-50, 0, 0)
 const mesh2 = new THREE.Mesh(geometry2, material2)
