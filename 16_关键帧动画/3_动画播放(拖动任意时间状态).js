@@ -78,8 +78,9 @@ bu.addEventListener('click', function () {
         bu.innerHTML = '继续';// 如果改变为暂停状态，按钮文字设置为“继续”
     }
 })
-
-
+//在暂停情况下，设置.time属性,把动画定位在任意时刻
+clipAction.paused = true;
+clipAction.time = 4  //初始化拖动条时间状态
 
 const clock = new THREE.Clock();
 function loop() {
@@ -89,5 +90,9 @@ function loop() {
     mixer.update(frameT);
 }
 loop();
+
+const gui = new GUI(); //创建GUI对象
+gui.add(clipAction, 'time', 0, 6);
+
 
 
